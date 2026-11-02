@@ -363,7 +363,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4029641451826133484, guid: 5441efc7f73525341a1a4e218a38c101, type: 3}
       propertyPath: jumpingPower
-      value: 500
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 6460470043902181444, guid: 5441efc7f73525341a1a4e218a38c101, type: 3}
       propertyPath: m_LocalPosition.x

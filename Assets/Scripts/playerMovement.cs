@@ -11,8 +11,7 @@ public class playerMovement : MonoBehaviour
     private Rigidbody2D rb;
     [SerializeField] private Transform groundCheck;
     [SerializeField] private LayerMask groundlayer;
-    [SerializeField]
-    private bool isGrounded;
+    
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -21,12 +20,10 @@ public class playerMovement : MonoBehaviour
     void Update()
     {
         horizontal = Input.GetAxisRaw("Horizontal");
-        Debug.Log("h: " + horizontal);
-        isGrounded = IsGrounded();
-        if (Input.GetButtonDown("Jump") && isGrounded)
+
+        if (Input.GetButtonDown("Jump") && IsGrounded())
         {
-            Debug.Log("jump");
-            rb.AddForce(Vector2.up* jumpingPower);
+            rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpingPower);
         }
         if (Input.GetButtonUp("Jump") && rb.linearVelocity.y > 0f)
         {
