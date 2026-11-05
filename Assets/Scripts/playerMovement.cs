@@ -1,4 +1,6 @@
+using JetBrains.Annotations;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class playerMovement : MonoBehaviour
 {
@@ -54,5 +56,22 @@ public class playerMovement : MonoBehaviour
             localScale.x *= -1f;
             transform.localScale = localScale;
         }
+
+        //Main Menu
+        public void MainMenu()
+        {
+            SceneManager.LoadScene(0);
+        }
+
+        //Quit game/exit play mode if in Editor
+        public void Quit()
+    {
+        Application.Quit(); //Quits the game (only works in build)
+#if UNITY_EDITOR
+        UnityEditor.EditorApplication.isPlaying = false; //Exits play mode (will only be executed in the editor)
+#endif
+
+    }
+
     }
 }
