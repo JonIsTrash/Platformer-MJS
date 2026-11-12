@@ -1,77 +1,105 @@
-using JetBrains.Annotations;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
-public class playerMovement : MonoBehaviour
+public class PlayerMovement : MonoBehaviour
 {
-
     private float horizontal;
-    private float speed = 8f;
+
+    [SerializeField] private float speed = 8f;
     [SerializeField] private float jumpingPower = 16f;
+
+    [Header("Coyote Time")]
+    [SerializeField] private float coyoteTime = 0.15f;
+    private float coyoteTimeCounter;
+
     private bool isFacingRight = true;
+    private bool doubleJumpAvailable;
 
     private Rigidbody2D rb;
+
     [SerializeField] private Transform groundCheck;
-    [SerializeField] private LayerMask groundlayer;
-    
+    [SerializeField] private LayerMask groundLayer;
+
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
     }
-    // Update is called once per frame
-    void Update()
+
+    private void Update()
     {
         horizontal = Input.GetAxisRaw("Horizontal");
 
-        if (Input.GetButtonDown("Jump") && IsGrounded())
+        bool grounded = IsGrounded();
+
+        if (grounded)
         {
-            rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpingPower);
+            coyoteTimeCounter = coyoteTime;
+            doubleJumpAvailable = true;
         }
+        else
+        {
+            coyoteTimeCounter -= Time.deltaTime; //Når player ikke er grounded, så begynder coyote time at tælle ned.
+        }
+
+        if (Input.GetButtonDown("Jump"))
+        {
+            if (coyoteTimeCounter > 0f)
+            {
+                Jump();
+                coyoteTimeCounter = 0f;
+            }
+            else if (doubleJumpAvailable)
+            {
+                Jump();
+                doubleJumpAvailable = false;
+            }
+        }
+
         if (Input.GetButtonUp("Jump") && rb.linearVelocity.y > 0f)
         {
-            rb.linearVelocity = new Vector2(rb.linearVelocity.x, rb.linearVelocity.y * 0.5f);
-
-            Flip();
+            rb.linearVelocity = new Vector2(
+                rb.linearVelocity.x,
+                rb.linearVelocity.y * 0.5f
+            );
         }
+
+        Flip();
     }
+
     private void FixedUpdate()
     {
-        rb.linearVelocity = new Vector2(horizontal * speed, rb.linearVelocity.y);
+        rb.linearVelocity = new Vector2(
+            horizontal * speed,
+            rb.linearVelocity.y
+        );
     }
 
-    private bool IsGrounded() 
+    private void Jump()
     {
-
-        return Physics2D.OverlapCircle(groundCheck.position, 0.2f, groundlayer);
-
+        rb.linearVelocity = new Vector2(
+            rb.linearVelocity.x,
+            jumpingPower
+        );
     }
 
-    private void Flip()
+    private bool IsGrounded()
     {
-        if (isFacingRight && horizontal < 0f || !isFacingRight && horizontal > 0f)
+        return Physics2D.OverlapCircle(
+            groundCheck.position,
+            0.2f,
+            groundLayer
+        );
+    }
+
+    private void Flip() //Spørger efter jumo knappen, efter man har givet slip.
+    {
+        if ((isFacingRight && horizontal < 0f) ||
+            (!isFacingRight && horizontal > 0f))
         {
-
             isFacingRight = !isFacingRight;
+
             Vector3 localScale = transform.localScale;
             localScale.x *= -1f;
             transform.localScale = localScale;
         }
-
-        //Main Menu
-        public void MainMenu()
-        {
-            SceneManager.LoadScene(0);
-        }
-
-        //Quit game/exit play mode if in Editor
-        public void Quit()
-    {
-        Application.Quit(); //Quits the game (only works in build)
-#if UNITY_EDITOR
-        UnityEditor.EditorApplication.isPlaying = false; //Exits play mode (will only be executed in the editor)
-#endif
-
-    }
-
     }
 }
