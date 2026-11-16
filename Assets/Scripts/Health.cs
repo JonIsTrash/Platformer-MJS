@@ -3,18 +3,18 @@ using UnityEngine;
 public class Health : MonoBehaviour
 {
     [SerializeField] private float startingHealth;
-    private float currentHealth;
+    public float CurrentHealth { get; private set; }
 
 
     private void Awake()
     {
-        currentHealth = startingHealth;
+        CurrentHealth = startingHealth;
     }
     public void TakeDamage(float _damage)
     {
-        currentHealth = Mathf.Clamp(currentHealth - _damage, 0, startingHealth);
+        CurrentHealth = Mathf.Clamp(CurrentHealth - _damage, 0, startingHealth);
 
-        if (currentHealth > 0)
+        if (CurrentHealth > 0)
         {
             //player hurt
         }
@@ -23,4 +23,5 @@ public class Health : MonoBehaviour
             //player dead
         }
     }
+
 }
