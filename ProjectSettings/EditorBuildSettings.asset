@@ -6,6 +6,12 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/Jonathan.unity
+    guid: 95dfd580aa2f5f643aa28e293594f7a0
+  - enabled: 1
+    path: Assets/Scenes/Sidsel.unity
+    guid: db4dfae9d80148f4bbb0d4c649669005
+  - enabled: 1
     path: Assets/Scenes/SampleScene.unity
     guid: 8c9cfa26abfee488c85f1582747f6a02
   m_configObjects:
