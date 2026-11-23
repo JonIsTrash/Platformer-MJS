@@ -3,8 +3,7 @@ using UnityEngine.SceneManagement;
 
 public class Meny
 {
-    using UnityEngine;
-using UnityEngine.SceneManagement;
+
 
 //Main Menu
  void MainMenu()
