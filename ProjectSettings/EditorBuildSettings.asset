@@ -9,9 +9,18 @@ EditorBuildSettings:
     path: Assets/Scenes/Jonathan.unity
     guid: 95dfd580aa2f5f643aa28e293594f7a0
   - enabled: 1
+    path: Assets/Scenes/Level 1.unity
+    guid: 1b4996f45b7757143aa3df83981ff2aa
+  - enabled: 1
+    path: Assets/Scenes/Level 2.unity
+    guid: 3ff80b4da14422d4a9a3343227de33cd
+  - enabled: 1
+    path: Assets/Scenes/Level 3.unity
+    guid: 3db294138274da34a8e37e7cdae3b5ad
+  - enabled: 0
     path: Assets/Scenes/Sidsel.unity
     guid: db4dfae9d80148f4bbb0d4c649669005
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/SampleScene.unity
     guid: 8c9cfa26abfee488c85f1582747f6a02
   m_configObjects:
