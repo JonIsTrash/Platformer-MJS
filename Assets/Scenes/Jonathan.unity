@@ -1526,6 +1526,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: SealPlayer
       objectReference: {fileID: 0}
+    - target: {fileID: 5203134671382874553, guid: e8cea5b7c3faf124b8010099d341c928, type: 3}
+      propertyPath: m_Size.x
+      value: 4.208129
+      objectReference: {fileID: 0}
+    - target: {fileID: 5203134671382874553, guid: e8cea5b7c3faf124b8010099d341c928, type: 3}
+      propertyPath: m_Size.y
+      value: 5.393195
+      objectReference: {fileID: 0}
+    - target: {fileID: 5203134671382874553, guid: e8cea5b7c3faf124b8010099d341c928, type: 3}
+      propertyPath: m_Offset.x
+      value: 0.033625603
+      objectReference: {fileID: 0}
+    - target: {fileID: 5203134671382874553, guid: e8cea5b7c3faf124b8010099d341c928, type: 3}
+      propertyPath: m_Offset.y
+      value: 0.10340202
+      objectReference: {fileID: 0}
     - target: {fileID: 5776635746013825691, guid: e8cea5b7c3faf124b8010099d341c928, type: 3}
       propertyPath: m_LocalPosition.x
       value: -9.25
