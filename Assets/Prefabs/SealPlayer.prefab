@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &1644398587367539918
+--- !u!1 &26435681163819139
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,42 +8,43 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 6460470043902181444}
-  - component: {fileID: 2782560364592535489}
-  - component: {fileID: 3005221154433388645}
-  - component: {fileID: 9130106795108403017}
-  - component: {fileID: 4029641451826133484}
+  - component: {fileID: 5776635746013825691}
+  - component: {fileID: 725176520133744594}
+  - component: {fileID: 8643837478470170260}
+  - component: {fileID: 5203134671382874553}
+  - component: {fileID: 5855455905817794101}
+  - component: {fileID: 1230671507701656813}
   m_Layer: 0
-  m_Name: thegoat_0
-  m_TagString: Untagged
+  m_Name: SealPlayer
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &6460470043902181444
+--- !u!4 &5776635746013825691
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1644398587367539918}
+  m_GameObject: {fileID: 26435681163819139}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.13, y: -0.62, z: 0}
+  m_LocalPosition: {x: -9.25, y: -1.07, z: 0}
   m_LocalScale: {x: 0.2717, y: 0.2914, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 5924004496657456960}
+  - {fileID: 1774120875427713395}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &2782560364592535489
+--- !u!212 &725176520133744594
 SpriteRenderer:
   serializedVersion: 2
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1644398587367539918}
+  m_GameObject: {fileID: 26435681163819139}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -85,7 +86,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 5444251539728558661, guid: 4eb59698532f0d8409a47f5db59eb4c7, type: 3}
+  m_Sprite: {fileID: -8741545005956383620, guid: 88c14b33a5efeef4a9f04d3554575e5a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -95,14 +96,14 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
---- !u!50 &3005221154433388645
+--- !u!50 &8643837478470170260
 Rigidbody2D:
   serializedVersion: 5
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1644398587367539918}
+  m_GameObject: {fileID: 26435681163819139}
   m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
@@ -122,13 +123,13 @@ Rigidbody2D:
   m_SleepingMode: 0
   m_CollisionDetection: 1
   m_Constraints: 4
---- !u!61 &9130106795108403017
+--- !u!61 &5203134671382874553
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1644398587367539918}
+  m_GameObject: {fileID: 26435681163819139}
   m_Enabled: 1
   serializedVersion: 3
   m_Density: 1
@@ -156,35 +157,51 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.00000047683716, y: 0.07205105}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 5.48, y: 5.6}
+    oldSize: {x: 5.92, y: 5.08}
     newSize: {x: 5.48, y: 5.6}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 5.48, y: 5.6}
+  m_Size: {x: 6.561862, y: 5.4558973}
   m_EdgeRadius: 0
---- !u!114 &4029641451826133484
+--- !u!114 &5855455905817794101
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1644398587367539918}
+  m_GameObject: {fileID: 26435681163819139}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e84fe4fc57f278846a9e398dca2cea0a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::playerMovement
-  groundCheck: {fileID: 5924004496657456960}
-  groundlayer:
+  speed: 8
+  jumpingPower: 8
+  coyoteTime: 0.15
+  groundCheck: {fileID: 1774120875427713395}
+  groundLayer:
     serializedVersion: 2
     m_Bits: 64
---- !u!1 &4005953017521157118
+--- !u!114 &1230671507701656813
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 26435681163819139}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cb0679b58ea99bd40a936bb5f1121015, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Health
+  startingHealth: 10
+--- !u!1 &312169699904563249
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -192,7 +209,7 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 5924004496657456960}
+  - component: {fileID: 1774120875427713395}
   m_Layer: 0
   m_Name: GroundCheck
   m_TagString: Untagged
@@ -200,18 +217,18 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &5924004496657456960
+--- !u!4 &1774120875427713395
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4005953017521157118}
+  m_GameObject: {fileID: 312169699904563249}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: -2.791, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 6460470043902181444}
+  m_Father: {fileID: 5776635746013825691}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
